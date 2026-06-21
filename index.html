@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>代理覺醒 · The Agent Awakens</title>
+<meta name="description" content="龍蝦 OpenClaw 與 Hermes Agent，兩種 AI Agent 設計哲學，以及 SRE / Fab / Lab 實戰百景。"/>
+<style>
+  :root{--ink:#1d2230;--mut:#5a6378;--pa:#fbf8f0;--accent:#9a3b2f;--accent2:#2f5d7a;--dark:#14182a;--gold:#f4b860;--boxln:#e8c88a}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:"Noto Serif CJK TC","Songti TC","PingFang TC","Microsoft JhengHei",serif;color:var(--ink);
+       background:radial-gradient(1200px 600px at 50% -10%,#fff 0,var(--pa) 60%);min-height:100vh;line-height:1.8}
+  .wrap{max-width:980px;margin:0 auto;padding:56px 24px 96px}
+  header{text-align:center;margin-bottom:14px}
+  h1{font-size:42px;letter-spacing:8px;margin:0 0 8px}
+  .en-title{font-size:18px;letter-spacing:3px;color:var(--accent);font-family:Georgia,serif;margin:0 0 10px}
+  .sub{color:var(--mut);font-size:15px;font-family:"Noto Sans CJK TC","PingFang TC",sans-serif;margin:0 auto;max-width:640px}
+  .hero{display:flex;gap:36px;align-items:center;margin:36px 0 44px;flex-wrap:wrap;justify-content:center}
+  .hero img{width:340px;max-width:90vw;border-radius:14px;box-shadow:0 18px 50px rgba(20,24,42,.32)}
+  .pitch{flex:1;min-width:280px;max-width:460px}
+  .pitch .quote{font-size:19px;line-height:1.9;color:#3a3326;background:#fdf3e3;border:1px solid var(--boxln);
+       border-radius:14px;padding:20px 24px;box-shadow:0 4px 14px rgba(180,140,60,.12)}
+  .pitch .quote b{color:#9a6a1a}
+  h2.section{font-family:"Noto Sans CJK TC",sans-serif;font-size:13px;letter-spacing:3px;color:var(--mut);
+       text-align:center;text-transform:uppercase;margin:40px 0 18px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:680px){.cards{grid-template-columns:1fr}h1{font-size:34px;letter-spacing:5px}}
+  .card{display:block;text-decoration:none;color:inherit;background:var(--dark);border-radius:16px;padding:26px 26px 22px;
+       box-shadow:0 10px 30px rgba(20,24,42,.25);transition:transform .15s,box-shadow .15s;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,24,42,.4)}
+  .card .lang{font-family:"Noto Sans CJK TC",sans-serif;font-size:13px;letter-spacing:2px;color:#49c5e0}
+  .card .name{font-size:26px;color:#fff;margin:6px 0 4px;letter-spacing:2px}
+  .card .meta{font-family:"Noto Sans CJK TC",sans-serif;font-size:13px;color:#9aa3c0;line-height:1.6}
+  .card .go{display:inline-block;margin-top:14px;font-family:"Noto Sans CJK TC",sans-serif;font-size:13px;
+       color:var(--gold);border:1px solid #3a426a;border-radius:8px;padding:6px 14px}
+  .card.soon{background:#eceae1;color:#9a9789;cursor:default;box-shadow:none}
+  .card.soon:hover{transform:none;box-shadow:none}
+  .card.soon .lang{color:#b5926a}.card.soon .name{color:#6f6b5e}.card.soon .meta{color:#9a9789}
+  .pdfrow{text-align:center;margin-top:14px;font-family:"Noto Sans CJK TC",sans-serif;font-size:14px}
+  .pdfrow a{color:var(--accent2);text-decoration:none;margin:0 10px;border-bottom:1px solid #cdd9e0;padding-bottom:1px}
+  .pdfrow a:hover{color:var(--accent)}
+  footer{text-align:center;margin-top:56px;color:var(--mut);font-size:12.5px;font-family:"Noto Sans CJK TC",sans-serif;line-height:1.9}
+  footer a{color:var(--accent2);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>代理覺醒</h1>
+    <p class="en-title">THE AGENT AWAKENS</p>
+    <p class="sub">龍蝦 OpenClaw 與 Hermes Agent，兩種 AI Agent 設計哲學，以及 SRE / Fab / Lab 實戰百景。</p>
+  </header>
+
+  <div class="hero">
+    <img src="TheAgentAwakens.png" alt="代理覺醒 · The Agent Awakens 封面海報"/>
+    <div class="pitch">
+      <p class="quote">自動化的盡頭，不是「沒有人」，<br/>而是「<b>人只需要做最後那個決定</b>」。</p>
+    </div>
+  </div>
+
+  <h2 class="section">線上閱讀 · Read online</h2>
+  <div class="cards">
+    <a class="card" href="代理覺醒.html">
+      <div class="lang">繁體中文</div>
+      <div class="name">線上閱讀全書</div>
+      <div class="meta">34 章 + 附錄 A/B/C · 側欄目錄 · 約 300 情境</div>
+      <span class="go">開始閱讀 →</span>
+    </a>
+    <a class="card" href="en/TheAgentAwakens.html">
+      <div class="lang">English</div>
+      <div class="name">Read the full book</div>
+      <div class="meta">34 chapters + appendices · sticky TOC · ~300 scenarios</div>
+      <span class="go">Start reading →</span>
+    </a>
+    <div class="card soon">
+      <div class="lang">简体中文</div>
+      <div class="name">规划中</div>
+      <div class="meta">Simplified Chinese edition — planned</div>
+    </div>
+    <div class="card soon">
+      <div class="lang">日本語</div>
+      <div class="name">計画中</div>
+      <div class="meta">Japanese edition — planned</div>
+    </div>
+  </div>
+
+  <h2 class="section">下載 PDF · Download</h2>
+  <p class="pdfrow">
+    <a href="代理覺醒.pdf">📕 繁體中文 PDF（約 16 MB）</a>
+    <a href="en/TheAgentAwakens.pdf">📘 English PDF（~14 MB）</a>
+  </p>
+
+  <footer>
+    原始碼與全部語言版本：<a href="https://github.com/SzupoTseng/TheAgentAwakens">github.com/SzupoTseng/TheAgentAwakens</a><br/>
+    僅供教育與研究用途 · For educational &amp; research use only · 書中框架名稱為敘事示意
+  </footer>
+</div>
+</body>
+</html>
