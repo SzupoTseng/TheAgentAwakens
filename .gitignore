@@ -1,0 +1,14 @@
+# 本倉庫「會」收錄成品（PDF / HTML / 合併 MD）——它們是這本書的交付物。
+# This repo intentionally tracks the deliverables (PDF / HTML / merged MD).
+
+# ── 暫時排除：PDF 待用 Ctrl+P 重新列印後再加入（headless 列印被本機原則封鎖）──
+# TEMP: PDFs excluded until re-printed via Ctrl+P (headless printing is policy-blocked here).
+代理覺醒.pdf
+en/TheAgentAwakens.pdf
+
+# ── 僅排除暫存與快取 / scratch & caches only ──
+docs/book/_serp_*.txt
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
