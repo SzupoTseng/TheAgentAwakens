@@ -58,7 +58,7 @@ python _build.py            # 合併單檔 .md + 帶側欄目錄的 .html（PDF 
 |------|------|------|
 | 繁體中文 | ✅ 完成 | 倉庫根目錄 |
 | English | ✅ 完成 | [`en/`](en/) |
-| 简体中文 | 🚧 規劃中 | — |
+| 简体中文 | ✅ 完成 | [`cn/`](cn/) |
 | 日本語 | 🚧 規劃中 | — |
 
 ---
@@ -113,7 +113,7 @@ cd en && python _build.py   # merged .md + HTML with a sidebar TOC (PDF printed 
 |----------|--------|----------|
 | 繁體中文 (Traditional Chinese) | ✅ Done | repo root |
 | English | ✅ Done | [`en/`](en/) |
-| 简体中文 (Simplified Chinese) | 🚧 Planned | — |
+| 简体中文 (Simplified Chinese) | ✅ Done | [`cn/`](cn/) |
 | 日本語 (Japanese) | 🚧 Planned | — |
 
 ---
@@ -159,10 +159,10 @@ cd en && python _build.py   # merged .md + HTML with a sidebar TOC (PDF printed 
 按顺序读完哲学，或直接翻到让你半夜睡不着的那个情境——每一景都自成一篇。构建为纯 Python、无第三方依赖：
 
 ```bash
-python _build.py            # 合并单档 .md + 带侧栏目录的 .html（PDF 由 HTML 打印）
+cd cn && python _build.py   # 合并单档 .md + 带侧栏目录的 .html（PDF 由 HTML 打印）
 ```
 
-> 简体中文书稿尚在规划中，当前可先阅读繁体中文版。
+> 简体中文版由繁体中文版以 OpenCC（tw2sp，含台湾用语转大陆用语）转换生成；转换脚本见仓库根目录 `_convert_cn.py`。
 
 ---
 
