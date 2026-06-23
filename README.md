@@ -59,7 +59,7 @@ python _build.py            # 合併單檔 .md + 帶側欄目錄的 .html（PDF 
 | 繁體中文 | ✅ 完成 | 倉庫根目錄 |
 | English | ✅ 完成 | [`en/`](en/) |
 | 简体中文 | ✅ 完成 | [`cn/`](cn/) |
-| 日本語 | 🚧 規劃中 | — |
+| 日本語 | ✅ 完成 | [`ja/`](ja/) |
 
 ---
 
@@ -114,7 +114,7 @@ cd en && python _build.py   # merged .md + HTML with a sidebar TOC (PDF printed 
 | 繁體中文 (Traditional Chinese) | ✅ Done | repo root |
 | English | ✅ Done | [`en/`](en/) |
 | 简体中文 (Simplified Chinese) | ✅ Done | [`cn/`](cn/) |
-| 日本語 (Japanese) | 🚧 Planned | — |
+| 日本語 (Japanese) | ✅ Done | [`ja/`](ja/) |
 
 ---
 
@@ -207,10 +207,10 @@ cd cn && python _build.py   # 合并单档 .md + 带侧栏目录的 .html（PDF 
 思想を順に読んでも、夜も眠れないあのシナリオに直行してもよい——どの景も独立している。ビルドは純粋な Python、サードパーティ依存なし：
 
 ```bash
-python _build.py            # 単一 .md + サイドバー目次付き .html（PDF は HTML から印刷）
+cd ja && python _build.py   # 単一 .md + サイドバー目次付き .html（PDF は HTML から印刷）
 ```
 
-> 日本語版の原稿は計画中です。現時点では繁体字中文版をご覧ください。
+> 日本語版は繁体字中文版から章ごとに翻訳・推敲したものです（統一用語・全構造保持）。
 
 ---
 
