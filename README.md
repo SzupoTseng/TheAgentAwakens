@@ -214,6 +214,29 @@ cd ja && python _build.py   # 単一 .md + サイドバー目次付き .html（P
 
 ---
 
+## 製作 PDF 的注意事項 / Generating the PDF
+
+PDF 由各語言的 HTML 用 **Chrome headless `--print-to-pdf`** 列印產生。以下幾點是實作中踩過的坑，照做才能得到正常大小（14–16 MB）的檔案：
+
+| # | 重點 | 原因 / 後果 |
+|---|------|-------------|
+| 1 | **用 Chrome headless，別手動 Ctrl+P** | headless 預設不印背景圖，檔案小；手動勾「背景圖形」會把 CSS 漸層點陣化，暴漲到 100 MB+ |
+| 2 | **列印前先完全關閉 Chrome** | Chrome 還開著時，headless 會被 singleton 接管而**靜默失敗**（什麼都沒產出）。Edge headless print 被 policy 禁用，不能當備案 |
+| 3 | **一次只印一個檔，不要平行** | 同時印多檔會互相汙染（曾把一份 PDF 撐到 248 MB）。逐檔單跑才正常 |
+| 4 | **`--user-data-dir` 指向可寫目錄** | 指到 `C:\Windows\Temp` 之類不可寫處會跳 GUI 錯誤框；用專案內暫存資料夾，印完再刪 |
+| 5 | **CJK 檔名先複製成 ASCII 暫存** | cmd 在 cp950 下解析中日文檔名會出錯；先印成 ASCII 名再改回中文名（`ja/` 版輸出本就用 ASCII 名避開此問題） |
+
+```bat
+REM 範例（Windows）：關掉 Chrome 後，逐檔單跑
+chrome.exe --headless --disable-gpu ^
+  --user-data-dir="D:\GameDevZ\TheAgentAwakens\_udd" ^
+  --print-to-pdf="output.pdf" "TheAgentAwakens.html"
+```
+
+> The PDFs are printed from each edition's HTML via **Chrome headless `--print-to-pdf`**. Key gotchas: use headless (not manual Ctrl+P) to avoid rasterized backgrounds bloating the file; **fully quit Chrome first** or the print silently fails; print **one file at a time** (parallel runs corrupt output); point `--user-data-dir` at a writable folder; and copy CJK-named files to ASCII names before printing under `cmd`.
+
+---
+
 ## 教育・研究目的の声明 / Disclaimer
 
 本書は教育および研究目的のみ。書中の OpenClaw / Hermes Agent / ClawHub 等の名称は叙述上の symbol です。
